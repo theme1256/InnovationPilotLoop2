@@ -6,7 +6,7 @@ class PhaseButton extends StatelessWidget {
   final callback;
   final String txt;
   final IconData icon;
-  final page;
+  final String page;
 
   PhaseButton({
     @required this.icon,
@@ -47,7 +47,7 @@ class PhaseButton extends StatelessWidget {
           ],
         ),
       ),
-      onTap: () => { callback(context, txt) },
+      onTap: () => { callback(context, page) },
     );
   }
 }

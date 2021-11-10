@@ -5,6 +5,7 @@ import 'main.dart';
 import 'app_state_container.dart';
 import 'models/app_state.dart';
 import 'models/themes/COBOD.dart';
+import 'screens/home.dart';
 // import 'screens/start.dart';
 
 // ignore: must_be_immutable
@@ -13,6 +14,7 @@ class AppRootWidget extends StatelessWidget {
 
   final _routes = {
     '/': (BuildContext context) => new SigninScreen(),
+    '/home': (BuildContext context) => new HomeScreen(),
   };
 
   @override

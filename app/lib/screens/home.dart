@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import '../widgets/empty_appbar.dart';
 import '../widgets/process_header.dart';
 import '../widgets/phase_button.dart';
+import 'receive/select.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key}) : super(key: key);
@@ -14,8 +15,15 @@ class HomeScreen extends StatefulWidget {
 }
 
 class HomeScreenState extends State<HomeScreen> {
-  void _nextPage(context, page) {
-    Route route = CupertinoPageRoute(builder: (context) => page);
+  void _nextPage(context, String page) {
+    Route route;
+    switch (page) {
+      case "receive":
+        route = CupertinoPageRoute(builder: (context) => ReceiveSelectScreen());
+        break;
+      default:
+        route = CupertinoPageRoute(builder: (context) => HomeScreen());
+    }
     Navigator.push(context, route);
   }
 
@@ -40,32 +48,32 @@ class HomeScreenState extends State<HomeScreen> {
                 mainAxisSpacing: 20,
                 children: [
                   PhaseButton(
-                    icon: Icons.move_to_inbox,
+                    icon: Icons.cloud_download,
                     txt: "Receive package", 
                     color: Color.fromARGB(255, 101, 128, 255), 
                     callback: _nextPage,
-                    page: HomeScreen(),
+                    page: "receive",
                   ),
                   PhaseButton(
                     icon: Icons.info_outline,
                     txt: "Scan item",
                     color: Color.fromARGB(255, 68, 179, 171),
                     callback: _nextPage,
-                    page: HomeScreen(),
+                    page: "item",
                   ),
                   PhaseButton(
                     icon: Icons.backup,
                     txt: "Pack for shipment",
                     color: Color.fromARGB(255, 243, 196, 46),
                     callback: _nextPage,
-                    page: HomeScreen(),
+                    page: "ship",
                   ),
                   PhaseButton(
                     icon: Icons.mail_outline,
                     txt: "Scan order",
                     color: Color.fromARGB(255, 238, 104, 81),
                     callback: _nextPage,
-                    page: HomeScreen(),
+                    page: "order",
                   ),
                 ],
               ),

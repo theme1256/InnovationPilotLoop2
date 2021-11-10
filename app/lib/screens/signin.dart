@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import 'home.dart';
 import '../main.dart';
@@ -39,7 +38,7 @@ class SigninScreenState extends State<SigninScreen> {
               SizedBox(
                 width: double.infinity,
                 child: Text(
-                  "Welcome back,", 
+                  "Welcome,", 
                   style: TextStyle(fontSize: 24.0),
                   textAlign: TextAlign.left,
                 ),
