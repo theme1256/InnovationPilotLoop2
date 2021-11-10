@@ -5,7 +5,10 @@ import 'package:flutter/cupertino.dart';
 import '../widgets/empty_appbar.dart';
 import '../widgets/process_header.dart';
 import '../widgets/phase_button.dart';
+import 'item/scan.dart';
+import 'order/scan.dart';
 import 'receive/select.dart';
+import 'ship/scan.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key}) : super(key: key);
@@ -20,6 +23,15 @@ class HomeScreenState extends State<HomeScreen> {
     switch (page) {
       case "receive":
         route = CupertinoPageRoute(builder: (context) => ReceiveSelectScreen());
+        break;
+      case "item":
+        route = CupertinoPageRoute(builder: (context) => ItemScanScreen());
+        break;
+      case "ship":
+        route = CupertinoPageRoute(builder: (context) => ShipScanScreen());
+        break;
+      case "order":
+        route = CupertinoPageRoute(builder: (context) => OrderScanScreen());
         break;
       default:
         route = CupertinoPageRoute(builder: (context) => HomeScreen());
