@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/cupertino.dart';
 
+import '../order/info.dart';
 import '../../widgets/empty_appbar.dart';
+import 'move.dart';
+import 'note.dart';
 
 class ItemInfoScreen extends StatefulWidget {
   ItemInfoScreen({Key key}) : super(key: key);
@@ -14,16 +17,16 @@ class ItemInfoScreen extends StatefulWidget {
 
 class ItemInfoScreenState extends State<ItemInfoScreen> {
   void _move(context) {
-    // Route route = CupertinoPageRoute(builder: (context) => ItemInfoScreen());
-    // Navigator.push(context, route);
+    Route route = CupertinoPageRoute(builder: (context) => ItemMoveScreen());
+    Navigator.push(context, route);
   }
   void _showOrder(context) {
-    // Route route = CupertinoPageRoute(builder: (context) => ItemInfoScreen());
-    // Navigator.push(context, route);
+    Route route = CupertinoPageRoute(builder: (context) => OrderInfoScreen());
+    Navigator.pushReplacement(context, route);
   }
   void _addNote(context) {
-    // Route route = CupertinoPageRoute(builder: (context) => ItemInfoScreen());
-    // Navigator.push(context, route);
+    Route route = CupertinoPageRoute(builder: (context) => ItemNoteScreen());
+    Navigator.push(context, route);
   }
 
   @override

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/cupertino.dart';
 
+import '../item/info.dart';
 import '../../widgets/receive_item_line.dart';
 import '../../widgets/horizontal_line.dart';
 import '../../widgets/bottom_button.dart';
@@ -21,8 +22,8 @@ class OrderInfoScreenState extends State<OrderInfoScreen> {
   }
   
   void _info(context, id) {
-    // Route route = CupertinoPageRoute(builder: (context) => ReceiveItemScreen());
-    // Navigator.push(context, route);
+    Route route = CupertinoPageRoute(builder: (context) => ItemInfoScreen());
+    Navigator.pushReplacement(context, route);
   }
 
   Map<int, Map<String, String>> items = {

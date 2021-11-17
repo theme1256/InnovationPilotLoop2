@@ -17,7 +17,7 @@ class OrderScanScreen extends StatefulWidget {
 class OrderScanScreenState extends State<OrderScanScreen> {
   void _go(context) {
     Route route = CupertinoPageRoute(builder: (context) => OrderInfoScreen());
-    Navigator.push(context, route);
+    Navigator.pushReplacement(context, route);
   }
 
   @override

@@ -17,7 +17,7 @@ class ItemScanScreen extends StatefulWidget {
 class ItemScanScreenState extends State<ItemScanScreen> {
   void _go(context) {
     Route route = CupertinoPageRoute(builder: (context) => ItemInfoScreen());
-    Navigator.push(context, route);
+    Navigator.pushReplacement(context, route);
   }
 
   @override

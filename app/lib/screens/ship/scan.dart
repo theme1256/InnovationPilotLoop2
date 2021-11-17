@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/cupertino.dart';
 
+import 'list.dart';
 import '../../widgets/bottom_button.dart';
 import '../../widgets/empty_appbar.dart';
 import '../../widgets/process_header.dart';
@@ -15,8 +16,8 @@ class ShipScanScreen extends StatefulWidget {
 
 class ShipScanScreenState extends State<ShipScanScreen> {
   void _go(context) {
-    // Route route = CupertinoPageRoute(builder: (context) => ItemInfoScreen());
-    // Navigator.push(context, route);
+    Route route = CupertinoPageRoute(builder: (context) => ShipListScreen());
+    Navigator.pushReplacement(context, route);
   }
 
   @override
